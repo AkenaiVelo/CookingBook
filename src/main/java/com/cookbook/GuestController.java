@@ -1,5 +1,6 @@
 package com.cookbook;
  
+import com.cookbook.DAO.PersonViewDAO;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,8 @@ public class GuestController {
  
     @Autowired
     private GuestDao guestDao;
+    @Autowired
+    private PersonViewDAO personViewDAO;
  
     @RequestMapping(value="/guest")
     public ModelAndView guestbook(HttpServletRequest request) {
@@ -18,8 +21,11 @@ public class GuestController {
         String name = request.getParameter("name");
         if (name != null)
             guestDao.persist(new Guest(name));
+        ModelAndView m=new ModelAndView("guest.jsp");
+        m.addObject("guestDao", guestDao);
+        m.addObject("personViewDAO", personViewDAO);
  
         // Prepare the result view (guest.jsp):
-        return new ModelAndView("guest.jsp", "guestDao", guestDao);
+        return m;
     }
 }
