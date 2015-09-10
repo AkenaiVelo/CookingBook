@@ -1,4 +1,4 @@
-package Main;
+package com.cookbok;
  
 import java.util.List;
 import javax.persistence.EntityManager;

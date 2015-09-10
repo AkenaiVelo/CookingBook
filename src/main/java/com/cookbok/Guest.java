@@ -1,4 +1,4 @@
-package Main;
+package com.cookbok;
  
 import java.io.Serializable;
 import java.sql.Date;
