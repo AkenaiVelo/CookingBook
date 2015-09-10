@@ -2,6 +2,7 @@
 <%@page import="com.cookbook.*"%>
  
 <jsp:useBean id="guestDao" type="com.cookbook.GuestDao" scope="request" />
+<jsp:useBean id="personViewDAO" type="com.cookbook.DAO.PersonViewDAO" scope="request" />
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
@@ -17,13 +18,12 @@
             <input type="submit" value="Add" />
         </form>
  
-        <hr><ol> 
+        <ol> 
+            <!--
         <% for (Guest guest : guestDao.getAllGuests()) { %>
             <li> <%= guest %> </li>
         <% } %>
-        </ol><hr>
- 
-		<iframe src="http://www.objectdb.com/pw.html?spring-download"
-            frameborder="0" scrolling="no" width="100%" height="30"></iframe>
+            -->
+        </ol>
 	</body>
 </html>
