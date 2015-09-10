@@ -19,11 +19,11 @@
         </form>
  
         <ol> 
-            <!--
+            
         <% for (Guest guest : guestDao.getAllGuests()) { %>
             <li> <%= guest %> </li>
         <% } %>
-            -->
+            
         </ol>
 	</body>
 </html>

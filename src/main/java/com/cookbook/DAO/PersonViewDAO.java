@@ -11,7 +11,6 @@ public class PersonViewDAO {
     @PersistenceContext private EntityManager em;
 
     public PersonViewDAO() {
-        System.err.println("Personviewdao");
     }
     
     @Transactional
