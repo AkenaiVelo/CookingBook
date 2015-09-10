@@ -1,7 +1,7 @@
 <%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@page import="guest.*"%>
+<%@page import="com.cookbook.*"%>
  
-<jsp:useBean id="guestDao" type="guest.GuestDao" scope="request" />
+<jsp:useBean id="guestDao" type="com.cookbook.GuestDao" scope="request" />
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
