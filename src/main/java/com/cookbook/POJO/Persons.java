@@ -10,6 +10,8 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -18,6 +20,7 @@ import javax.persistence.Table;
  * @author Velo
  */
 @Entity
+ @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "HIBER.PERSONS")
 public class Persons implements Serializable {
     private static final long serialVersionUID = 1L;
@@ -29,10 +32,17 @@ public class Persons implements Serializable {
     private String firstname;
     @Column(name = "SURNAME")
     private String surname;
-    @OneToMany(mappedBy = "personId", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "personId", fetch = FetchType.EAGER, targetEntity = Address.class)
     private List<EngineAddress> addressList;
 
     public Persons() {
+    }
+    public  Persons(Persons p)
+    {
+        personId=p.personId;
+        firstname=p.firstname;
+        surname=p.surname;
+        addressList=p.addressList;//do poprawy dla rozy kopiowanie glebokie a nie plytkie
     }
 
     public Persons( String firstname, String surname, List<EngineAddress> addressList) {

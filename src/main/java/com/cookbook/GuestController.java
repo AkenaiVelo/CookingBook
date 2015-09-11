@@ -11,18 +11,17 @@ import org.springframework.web.servlet.ModelAndView;
 public class GuestController {
  
     @Autowired
-    private GuestDao guestDao;
-    @Autowired
     private PersonViewDAO personViewDAO;
  
     @RequestMapping(value="/guest")
     public ModelAndView guestbook(HttpServletRequest request) {
         // Handle a new guest (if any):
         String name = request.getParameter("name");
+        /*
         if (name != null)
             guestDao.persist(new Guest(name));
+                */
         ModelAndView m=new ModelAndView("guest.jsp");
-        m.addObject("guestDao", guestDao);
         m.addObject("personViewDAO", personViewDAO);
  
         // Prepare the result view (guest.jsp):

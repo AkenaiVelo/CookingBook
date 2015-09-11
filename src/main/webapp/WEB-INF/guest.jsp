@@ -1,7 +1,6 @@
+<%@page import="com.cookbook.ENGINE.EnginePersons"%>
 <%@page contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@page import="com.cookbook.*"%>
  
-<jsp:useBean id="guestDao" type="com.cookbook.GuestDao" scope="request" />
 <jsp:useBean id="personViewDAO" type="com.cookbook.DAO.PersonViewDAO" scope="request" />
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
@@ -19,10 +18,11 @@
         </form>
  
         <ol> 
-            
-        <% for (Guest guest : guestDao.getAllGuests()) { %>
-            <li> <%= guest %> </li>
+            test
+        <% for (EnginePersons p : personViewDAO.findAll()) { %>
+            <li> <%= p %> </li>
         <% } %>
+            test
             
         </ol>
 	</body>

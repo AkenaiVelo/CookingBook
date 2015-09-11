@@ -3,14 +3,14 @@ package com.cookbook.ENGINE;
 
 import com.cookbook.POJO.Persons;
 import java.util.List;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 
-@Entity
-@Table(name="PERSON")
 public class EnginePersons extends Persons{
 
     public EnginePersons() {
+    }
+    public EnginePersons(Persons p)
+    {
+        super(p);
     }
 
     public EnginePersons(int person_id, String firstname, String Surname, List<EngineAddress> adresy) {

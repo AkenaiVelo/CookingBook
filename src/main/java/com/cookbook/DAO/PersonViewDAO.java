@@ -1,6 +1,8 @@
 package com.cookbook.DAO;
 
 import com.cookbook.ENGINE.EnginePersons;
+import com.cookbook.POJO.Persons;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 import org.springframework.stereotype.Component;
@@ -25,9 +27,14 @@ public class PersonViewDAO {
      }
      
      public List<EnginePersons> findAll() {
-        List<EnginePersons> all;
-        Query query = em.createQuery("from EnginePersons e"); //You will get Weayher object
+        List<Persons> all;
+        List<EnginePersons> all2=new ArrayList<>();
+        Query query = em.createQuery("SELECT p FROM Persons p"); //You will get Weayher object
         all = query.getResultList(); //You are accessing  as list<WeatherModel>
-        return all;
+        for(Persons p : all)
+        {
+            all2.add(new EnginePersons(p));
+        }
+        return all2;
     }
 }
