@@ -7,8 +7,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <title>Cooking Book</title>
-            <link rel="stylesheet" type="text/css" href="decorators/css/style.css">	
-                
+            <link rel="stylesheet" type="text/css" href="./../decorators/css/style.css">	
+            <link rel="stylesheet" type="text/css" href="decorators/css/style.css">
               
                 
                 </head>
@@ -17,7 +17,7 @@
 
                     <header id="header">
                         <div class="innertube">
-                            <h1>Header...</h1>
+                            
                         </div>
                     </header>
 

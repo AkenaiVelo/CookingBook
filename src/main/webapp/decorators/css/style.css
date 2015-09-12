@@ -8,6 +8,7 @@ body {
 #header {
 
     background-image: url("http://vpx.pl/i/2015/09/12/header.jpg");
+    background-position: right;
     background-repeat: no-repeat;
     height: 219px;
 }
