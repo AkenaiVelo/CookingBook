@@ -13,7 +13,7 @@ public class GuestController {
     @Autowired
     private PersonViewDAO personViewDAO;
  
-    @RequestMapping(value="/guest")
+    @RequestMapping(value="/index")
     public ModelAndView guestbook(HttpServletRequest request) {
         // Handle a new guest (if any):
         String name = request.getParameter("name");
@@ -21,7 +21,7 @@ public class GuestController {
         if (name != null)
             guestDao.persist(new Guest(name));
                 */
-        ModelAndView m=new ModelAndView("guest.jsp");
+        ModelAndView m=new ModelAndView("index.jsp");
         m.addObject("personViewDAO", personViewDAO);
  
         // Prepare the result view (guest.jsp):

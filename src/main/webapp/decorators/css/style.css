@@ -7,7 +7,7 @@ body {
 
 #header {
 
-    background-image: url("http://vpx.pl/i/2015/09/12/header.jpg");
+    background-image: url("http://localhost:8080/CookingBook/decorators/img/header.jpg");
     background-position: center top;
     background-repeat: no-repeat;
     height: 219px;
@@ -32,7 +32,7 @@ main {
     float: left;
     width: 230px;
     margin-left: -100%;
-    background-image: url("http://vpx.pl/i/2015/09/12/nawigacja.png");
+    background-image: url("http://localhost:8080/CookingBook/decorators/img/nawigacja.png");
   
 }
 
@@ -75,7 +75,7 @@ nav ul {
 nav ul a {
     color: white;
     font-size: 16px;
-    background-image: url("http://vpx.pl/i/2015/09/12/itemc9c69.png");
-    background-size: auto;
+    background-image: url("http://localhost:8080/CookingBook/decorators/img/highlight.png");
+    background-size: 160%;
     text-decoration: none;
 }                       

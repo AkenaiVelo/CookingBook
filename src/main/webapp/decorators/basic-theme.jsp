@@ -8,7 +8,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <title>Cooking Book</title>
          
-            <link rel="stylesheet" type="text/css" href="decorators/css/style.css">
+            <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/decorators/css/style.css">
               
                 
                 </head>
@@ -37,9 +37,9 @@
                             <div class="innertube">
                                 <h3>Left heading</h3>
                                 <ul>
-                                    <li><a href="#">Link 1</a></li>
-                                    <li><a href="#">Link 2</a></li>
-                                    <li><a href="#">Link 3</a></li>
+                                    <li><a href="Pages/test1.jsp">Link a</a></li>
+                                    <li><a href="#">Link b</a></li>
+                                    <li><a href="#">Link c</a></li>
                                     <li><a href="#">Link 4</a></li>
                                     <li><a href="#">Link 5</a></li>
                                 </ul>
