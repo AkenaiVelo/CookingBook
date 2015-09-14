@@ -44,7 +44,7 @@ public class EnginePersons extends Persons{
 
     @Override
     public String toString() {
-        return " personId=" + this.getPersonId() + " Firstname="+this.getFirstname()+" surname="+this.getSurname();
+        return super.toString();
     }
    
     

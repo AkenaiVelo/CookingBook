@@ -24,6 +24,9 @@
             <li> <%= p %> </li>
         <% } %>
             test
+            <%EnginePersons x= personViewDAO.getPersonById(1); %>
+            <%= x%>
+            aaaa
             
         </ol>
 	</body>

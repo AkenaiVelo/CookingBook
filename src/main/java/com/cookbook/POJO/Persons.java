@@ -96,7 +96,12 @@ public class Persons implements Serializable {
     public void setAddressList(List<EngineAddress> addressList) {
         this.addressList = addressList;
     }
-
+    
+    @Override
+    public String toString()
+    {
+        return " personId=" + this.getPersonId() + " Firstname="+this.getFirstname()+" surname="+this.getSurname();
+    }
     
     
 }
