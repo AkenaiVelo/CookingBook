@@ -1,14 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.cookbook.DTO;
 
-/**
- *
- * @author byakuya
- */
+package com.cookbook.DTO;
+import com.cookbook.ENGINE.EnginePersons;
+
 public class PersonDTO {
-    
+    public PersonDTO(EnginePersons e)
+    {
+        
+    }
 }

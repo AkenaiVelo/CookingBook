@@ -14,7 +14,7 @@ public class IndexController {
     private PersonViewDAO personViewDAO;
  
     @RequestMapping(value="/index")
-    public ModelAndView guestbook(HttpServletRequest request) {
+    public ModelAndView index(HttpServletRequest request) {
         // Handle a new guest (if any):
         String name = request.getParameter("name");
         /*
