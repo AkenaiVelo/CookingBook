@@ -1,6 +1,7 @@
 
 package com.cookbook.ENGINE;
 
+import com.cookbook.DTO.PersonDTO;
 import com.cookbook.POJO.Persons;
 import java.util.List;
 
@@ -9,6 +10,11 @@ public class EnginePersons extends Persons{
     public EnginePersons() {
     }
     public EnginePersons(Persons p)
+    {
+        super(p);
+    }
+    
+    public EnginePersons(PersonDTO p)
     {
         super(p);
     }

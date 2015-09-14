@@ -23,4 +23,13 @@ public class PersonService {
         return result;
     }
     
+    public boolean register(PersonDTO e)
+    {
+        return baza.AddPerson(new EnginePersons(e));
+    }
+    
+ 
+    
+    
+    
 }

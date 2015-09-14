@@ -10,29 +10,35 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class PersonViewDAO {
-    @PersistenceContext private EntityManager em;
+
+    @PersistenceContext
+    private EntityManager em;
 
     public PersonViewDAO() {
     }
-    
+
     @Transactional
-    public EnginePersons getPersonById(int id)
-    {
+    public EnginePersons getPersonById(int id) {
         EnginePersons result = em.find(EnginePersons.class, id);
         return result;
     }
-     public void AddPerson(EnginePersons person)
-     {
-         em.persist(person);
-     }
-     
-     public List<EnginePersons> findAll() {
+
+    public boolean AddPerson(EnginePersons person) {
+        try {
+            em.persist(person);
+        } catch (PersistenceException p) {
+            //log4j.error(blablabla+p);
+            return false;
+        }
+        return true;
+    }
+
+    public List<EnginePersons> findAll() {
         List<Persons> all;
-        List<EnginePersons> all2=new ArrayList<>();
+        List<EnginePersons> all2 = new ArrayList<>();
         Query query = em.createQuery("SELECT p FROM Persons p"); //You will get Weayher object
         all = query.getResultList(); //You are accessing  as list<WeatherModel>
-        for(Persons p : all)
-        {
+        for (Persons p : all) {
             all2.add(new EnginePersons(p));
         }
         return all2;

@@ -1,6 +1,7 @@
 
 package com.cookbook.POJO;
 
+import com.cookbook.DTO.PersonDTO;
 import com.cookbook.ENGINE.EngineAddress;
 import java.io.Serializable;
 import java.util.List;
@@ -43,6 +44,13 @@ public class Persons implements Serializable {
         firstname=p.firstname;
         surname=p.surname;
         addressList=p.addressList;//do poprawy dla rozy kopiowanie glebokie a nie plytkie
+    }
+    public  Persons(PersonDTO p)
+    {
+        personId=p.getPersonId();
+        firstname=p.getFirstname();
+        surname=p.getSurname();
+        addressList=null;
     }
 
     public Persons( String firstname, String surname, List<EngineAddress> addressList) {
