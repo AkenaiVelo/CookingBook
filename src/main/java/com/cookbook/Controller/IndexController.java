@@ -6,6 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
  
 @Controller
 public class IndexController {
@@ -15,7 +18,11 @@ public class IndexController {
  
     @RequestMapping(value="/index")
     public ModelAndView index(HttpServletRequest request) {
-        // Handle a new guest (if any):
+       
+            Logger logger = LoggerFactory.getLogger(IndexController.class);
+            logger.error("ERROR");
+
+        System.out.print("xxxx");
         String name = request.getParameter("name");
         /*
         if (name != null)
