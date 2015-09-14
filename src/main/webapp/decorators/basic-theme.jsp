@@ -7,17 +7,17 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
             <title>Cooking Book</title>
-         
+
             <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/decorators/css/style.css">
-              
-                
+
+
                 </head>
 
                 <body>		
 
                     <header id="header">
                         <div class="innertube">
-                            
+
                         </div>
                     </header>
 
@@ -62,13 +62,30 @@
                             </div>
                         </nav>
 
-                    </div>
+                        <login id="login">
+                            <div class="loginmargin">
+                                
+                                    <h3>Zaloguj sie:</h3>
+                                <form action="action_page.php">
+                                   
+                                    <input type="text" name="login" placeholder="login" style="width: 100px;" >
+                                    <br>                                                
+                                        <input type="password" name="password" placeholder="haslo" style="width: 100px;">
+                                                        <br><br>
+                                                                <input type="submit" value="Wyslij!" style="width: 100px;">
+                                                                    </form>
+                                    <br><br>     <img src="${pageContext.request.contextPath}/decorators/img/register.png">
 
-                    <footer id="footer">
-                        <div class="innertube">
-                            <p>Footer...</p>
-                        </div>
-                    </footer>
+                                                                    </div>
+                                                                    </login>
+                                                         
+                                                                    </div>
 
-                </body>
-                </html>
+                                                                    <footer id="footer">
+                                                                        
+                                                                            <p>Tutaj kiedys bedzie stopka :)...</p>
+                                                                       
+                                                                    </footer>
+
+                                                                    </body>
+                                                                    </html>

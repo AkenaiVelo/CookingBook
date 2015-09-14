@@ -15,7 +15,7 @@ body {
 
 #header h1 {
     margin: 0;
-    padding-top: 15px;
+    padding-top: 0px;
 }
 
 main {
@@ -36,14 +36,28 @@ main {
   
 }
 
+#login {
+    padding-bottom: 10010px;
+    margin-bottom: -10000px;
+    float: right;
+    width: 200px;
+    height: 245px;
+    margin-left: -100%;
+    background-repeat: no-repeat;
+    background-image: url("http://localhost:8080/CookingBook/decorators/img/login.jpg");
+  
+}
+
 #footer {
     clear: left;
     width: 100%;
-    background: #ccc;
+    height: 35px;
+    background-image: url("http://localhost:8080/CookingBook/decorators/img/footer.png");
+    background-repeat: repeat-x;
     text-align: center;
-    padding: 4px 0;
+    padding: 0px 0;
     position:fixed;
-    bottom:0;
+    bottom:0px;
 }
 
 #wrapper {
@@ -59,8 +73,13 @@ main {
     margin-top: 0;
 }
 
+.loginmargin {
+    margin-left: 50px; /* Padding for content */
+    margin-top: 0;
+}
+
 p {
-    color: #555;
+    color: #ffffff;
 }
 
 nav ul {
@@ -76,6 +95,6 @@ nav ul a {
     color: white;
     font-size: 16px;
     background-image: url("http://localhost:8080/CookingBook/decorators/img/highlight.png");
-    background-size: 160%;
+  /*  background-size: 160%; */
     text-decoration: none;
 }                       
