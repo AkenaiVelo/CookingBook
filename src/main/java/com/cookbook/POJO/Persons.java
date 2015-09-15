@@ -1,4 +1,3 @@
-
 package com.cookbook.POJO;
 
 import com.cookbook.DTO.PersonDTO;
@@ -21,9 +20,10 @@ import javax.persistence.Table;
  * @author Velo
  */
 @Entity
- @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name = "HIBER.PERSONS")
 public class Persons implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,33 +33,31 @@ public class Persons implements Serializable {
     private String firstname;
     @Column(name = "SURNAME")
     private String surname;
-    @OneToMany(mappedBy = "personId", fetch = FetchType.EAGER, targetEntity = Address.class)
+    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = Address.class)
     private List<EngineAddress> addressList;
 
     public Persons() {
     }
-    public  Persons(Persons p)
-    {
-        personId=p.personId;
-        firstname=p.firstname;
-        surname=p.surname;
-        addressList=p.addressList;//do poprawy dla rozy kopiowanie glebokie a nie plytkie
-    }
-    public  Persons(PersonDTO p)
-    {
-        personId=p.getPersonId();
-        firstname=p.getFirstname();
-        surname=p.getSurname();
-        addressList=null;
+
+    public Persons(Persons p) {
+        personId = p.personId;
+        firstname = p.firstname;
+        surname = p.surname;
+        addressList = p.addressList;//do poprawy dla rozy kopiowanie glebokie a nie plytkie
     }
 
-    public Persons( String firstname, String surname, List<EngineAddress> addressList) {
+    public Persons(PersonDTO p) {
+        personId = p.getPersonId();
+        firstname = p.getFirstname();
+        surname = p.getSurname();
+        addressList = null;
+    }
+
+    public Persons(String firstname, String surname, List<EngineAddress> addressList) {
         this.firstname = firstname;
         this.surname = surname;
         this.addressList = addressList;
     }
-    
-    
 
     public Persons(Integer personId) {
         this.personId = personId;
@@ -96,12 +94,10 @@ public class Persons implements Serializable {
     public void setAddressList(List<EngineAddress> addressList) {
         this.addressList = addressList;
     }
-    
+
     @Override
-    public String toString()
-    {
-        return " personId=" + this.getPersonId() + " Firstname="+this.getFirstname()+" surname="+this.getSurname();
+    public String toString() {
+        return " personId=" + this.getPersonId() + " Firstname=" + this.getFirstname() + " surname=" + this.getSurname();
     }
-    
-    
+
 }
