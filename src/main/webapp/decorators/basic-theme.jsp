@@ -64,28 +64,28 @@
 
                         <login id="login">
                             <div class="loginmargin">
-                                
-                                    <h3>Zaloguj sie:</h3>
+
+                                <h3>Zaloguj sie:</h3>
                                 <form action="action_page.php">
-                                   
+
                                     <input type="text" name="login" placeholder="login" style="width: 100px;" >
-                                    <br>                                                
-                                        <input type="password" name="password" placeholder="haslo" style="width: 100px;">
-                                                        <br><br>
-                                                                <input type="submit" value="Wyslij!" style="width: 100px;">
-                                                                    </form>
-                                    <br><br>     <img src="${pageContext.request.contextPath}/decorators/img/register.png">
+                                        <br>                                                
+                                            <input type="password" name="password" placeholder="haslo" style="width: 100px;">
+                                                <br><br>
+                                                        <input type="submit" value="Wyslij!" style="width: 100px;">
+                                                            </form>
+                                                            <br><br>     <img src="${pageContext.request.contextPath}/decorators/img/register.png">
 
-                                                                    </div>
-                                                                    </login>
-                                                         
-                                                                    </div>
+                                                                        </div>
+                                                                        </login>
 
-                                                                    <footer id="footer">
-                                                                        
+                                                                        </div>
+
+                                                                        <footer id="footer">
+
                                                                             <p>Tutaj kiedys bedzie stopka :)...</p>
-                                                                       
-                                                                    </footer>
 
-                                                                    </body>
-                                                                    </html>
+                                                                        </footer>
+
+                                                                        </body>
+                                                                        </html>

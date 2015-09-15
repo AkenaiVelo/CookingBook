@@ -9,22 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Service
 public class PersonService {
-    
+
     @Autowired
     private PersonViewDAO baza;
-    
-    public ArrayList<PersonDTO> usersList()
-    {
-        ArrayList<PersonDTO> result=new ArrayList<>();
-        for(EnginePersons e : baza.findAll())
-        {
+
+    public ArrayList<PersonDTO> usersList() {
+        ArrayList<PersonDTO> result = new ArrayList<>();
+        for (EnginePersons e : baza.findAll()) {
             result.add(new PersonDTO(e));
         }
         return result;
     }
-    
-    public boolean register(PersonDTO e)
-    {
+
+    public boolean register(PersonDTO e) {
         return baza.AddPerson(new EnginePersons(e));
-    }  
+    }
 }

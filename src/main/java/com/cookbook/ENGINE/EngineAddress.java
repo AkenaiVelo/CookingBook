@@ -1,17 +1,16 @@
-
 package com.cookbook.ENGINE;
 
 import com.cookbook.POJO.Address;
 
-public class EngineAddress extends Address{
+public class EngineAddress extends Address {
 
     public EngineAddress() {
     }
 
-    public EngineAddress(String city, String zipcode,EnginePersons person) {
-        super(city, zipcode,person);
+    public EngineAddress(String city, String zipcode, EnginePersons person) {
+        super(city, zipcode, person);
     }
-    
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -34,7 +33,7 @@ public class EngineAddress extends Address{
 
     @Override
     public String toString() {
-        return " addressId=" + this.getAddressId() + " City="+this.getCity()+" Zip-Code="+this.getZipcode();
+        return " addressId=" + this.getAddressId() + " City=" + this.getCity() + " Zip-Code=" + this.getZipcode();
     }
-    
+
 }

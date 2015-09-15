@@ -27,6 +27,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "Address.findAll", query = "SELECT a FROM Address a")})
 public class Address implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -44,13 +45,11 @@ public class Address implements Serializable {
     public Address() {
     }
 
-    public Address( String city, String zipcode, EnginePersons personId) {
+    public Address(String city, String zipcode, EnginePersons personId) {
         this.city = city;
         this.zipcode = zipcode;
         this.personId = personId;
     }
-    
-    
 
     public Address(Integer addressId) {
         this.addressId = addressId;
@@ -88,6 +87,4 @@ public class Address implements Serializable {
         this.personId = personId;
     }
 
-    
-    
 }

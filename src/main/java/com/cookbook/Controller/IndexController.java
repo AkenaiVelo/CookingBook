@@ -8,8 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-
-
 @Controller
 public class IndexController {
 
@@ -20,7 +18,7 @@ public class IndexController {
     public ModelAndView index(HttpServletRequest request) {
         Loger.logger.error("Index Controler");
         /*
-        String name = request.getParameter("name");
+         String name = request.getParameter("name");
          if (name != null)
          guestDao.persist(new Guest(name));
          */

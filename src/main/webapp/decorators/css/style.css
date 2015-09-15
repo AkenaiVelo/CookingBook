@@ -33,7 +33,7 @@ main {
     width: 230px;
     margin-left: -100%;
     background-image: url("http://localhost:8080/CookingBook/decorators/img/nawigacja.png");
-  
+
 }
 
 #login {
@@ -45,7 +45,7 @@ main {
     margin-left: -100%;
     background-repeat: no-repeat;
     background-image: url("http://localhost:8080/CookingBook/decorators/img/ramka.jpg");
-  
+
 }
 
 #footer {
@@ -87,14 +87,14 @@ nav ul {
     margin: 0;
     padding: 0;
     text-decoration: none;
-   
-    
+
+
 }
 
 nav ul a {
     color: white;
     font-size: 16px;
     background-image: url("http://localhost:8080/CookingBook/decorators/img/highlight.png");
-  /*  background-size: 160%; */
+    /*  background-size: 160%; */
     text-decoration: none;
 }                       

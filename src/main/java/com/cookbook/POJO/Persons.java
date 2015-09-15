@@ -33,7 +33,7 @@ public class Persons implements Serializable {
     private String firstname;
     @Column(name = "SURNAME")
     private String surname;
-    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = Address.class)
+    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = Address.class)  //zobacz czy działa z EAGER
     private List<EngineAddress> addressList;
 
     public Persons() {

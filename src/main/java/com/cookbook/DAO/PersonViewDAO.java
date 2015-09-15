@@ -17,9 +17,8 @@ public class PersonViewDAO {
     public PersonViewDAO() {
     }
 
-    
     public EnginePersons getPersonById(int id) {
-        Persons p=em.find(Persons.class, id);
+        Persons p = em.find(Persons.class, id);
         EnginePersons result = new EnginePersons(p);
         return result;
     }
@@ -44,6 +43,5 @@ public class PersonViewDAO {
         }
         return all2;
     }
-    
 
 }
