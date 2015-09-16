@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.cookbook.DTO;
 
-import com.cookbook.ENGINE.EnginePersons;
+import com.cookbook.ENGINE.EngineAddress;
 
-/**
- *
- * @author byakuya
- */
 public class AddressDTO {
 
     private Integer addressId;
@@ -18,9 +9,11 @@ public class AddressDTO {
     private String zipcode;
     private PersonDTO personId;
 
-    public AddressDTO(PersonDTO e) { // ????? <<<< tak ma byc czy EngineAddress
+    public AddressDTO(EngineAddress a) { // ????? <<<< tak ma byc czy EngineAddress
 
     }
+    
+    
 
     public Integer getAddressId() {
         return addressId;
