@@ -16,9 +16,9 @@ public class AddressDTO {
     private Integer addressId;
     private String city;
     private String zipcode;
-    private EnginePersons personId;
+    private PersonDTO personId;
 
-    public AddressDTO(EnginePersons e) { // ????? <<<< tak ma byc czy EngineAddress
+    public AddressDTO(PersonDTO e) { // ????? <<<< tak ma byc czy EngineAddress
 
     }
 
@@ -46,11 +46,11 @@ public class AddressDTO {
         this.zipcode = zipcode;
     }
 
-    public EnginePersons getPersonId() {
+    public PersonDTO getPersonId() {
         return personId;
     }
 
-    public void setPersonId(EnginePersons personId) {
+    public void setPersonId(PersonDTO personId) {
         this.personId = personId;
     }
 

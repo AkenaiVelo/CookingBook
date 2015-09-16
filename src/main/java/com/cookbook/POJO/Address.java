@@ -45,6 +45,12 @@ public class Address implements Serializable {
     public Address() {
     }
 
+    public Address(Address a){
+         this.city = a.city;
+        this.zipcode = a.zipcode;
+        this.personId = a.personId;
+    }
+    
     public Address(String city, String zipcode, EnginePersons personId) {
         this.city = city;
         this.zipcode = zipcode;

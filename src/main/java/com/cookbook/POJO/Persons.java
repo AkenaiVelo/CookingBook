@@ -3,6 +3,7 @@ package com.cookbook.POJO;
 import com.cookbook.DTO.PersonDTO;
 import com.cookbook.ENGINE.EngineAddress;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -43,9 +44,23 @@ public class Persons implements Serializable {
         personId = p.personId;
         firstname = p.firstname;
         surname = p.surname;
+        List ListaAdresow = new ArrayList(addressList);
         addressList = p.addressList;//do poprawy dla rozy kopiowanie glebokie a nie plytkie
+  
+      
     }
 
+    private ArrayList<EngineAddress> deepCopy(ArrayList<EngineAddress> intab){
+        ArrayList<EngineAddress> outtab = new ArrayList<>();
+        for(EngineAddress a:intab){
+            EngineAddress temp = new EngineAddress(a);
+            outtab.add(temp);
+        }
+        
+        
+        return outtab;
+    }
+    
     public Persons(PersonDTO p) {
         personId = p.getPersonId();
         firstname = p.getFirstname();
