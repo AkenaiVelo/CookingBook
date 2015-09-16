@@ -28,9 +28,4 @@ public class AddressService {
         }
         return result;
     }
-
- /*   public boolean register(PersonDTO e) {
-        return baza.AddPerson(new EnginePersons(e));
-    }
-    */
 }

@@ -21,15 +21,10 @@ public class AddressChangeDAO {
         try {
             person.setAddressList(address);
             em.persist(person);
-            
-            
         } catch (PersistenceException p) {
             //log4j.error(blablabla+p);
             return false;
         }
         return true;
     }
-
-  
- 
 }
