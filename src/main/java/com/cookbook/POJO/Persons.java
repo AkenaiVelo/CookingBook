@@ -44,13 +44,10 @@ public class Persons implements Serializable {
         personId = p.personId;
         firstname = p.firstname;
         surname = p.surname;
-        List ListaAdresow = new ArrayList(addressList);
-        addressList = p.addressList;//do poprawy dla rozy kopiowanie glebokie a nie plytkie
-  
-      
+        addressList = deepCopy(p.addressList);
     }
 
-    private ArrayList<EngineAddress> deepCopy(ArrayList<EngineAddress> intab){
+    private ArrayList<EngineAddress> deepCopy(List<EngineAddress> intab){
         ArrayList<EngineAddress> outtab = new ArrayList<>();
         for(EngineAddress a:intab){
             EngineAddress temp = new EngineAddress(a);

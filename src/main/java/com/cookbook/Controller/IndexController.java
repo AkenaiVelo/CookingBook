@@ -1,7 +1,7 @@
 package com.cookbook.Controller;
 
 import com.cookbook.DAO.PersonViewDAO;
-import com.cookbook.Other.Loger;
+//import com.cookbook.Other.Loger;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,7 +16,7 @@ public class IndexController {
 
     @RequestMapping(value = "/index")
     public ModelAndView index(HttpServletRequest request) {
-        Loger.logger.error("Index Controler");
+        //Loger.logger.error("Index Controler");
         /*
          String name = request.getParameter("name");
          if (name != null)

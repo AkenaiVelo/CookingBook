@@ -6,7 +6,6 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.*;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
 
 @Component
 public class PersonViewDAO {
@@ -23,15 +22,7 @@ public class PersonViewDAO {
         return result;
     }
 
-    public boolean AddPerson(EnginePersons person) {
-        try {
-            em.persist(person);
-        } catch (PersistenceException p) {
-            //log4j.error(blablabla+p);
-            return false;
-        }
-        return true;
-    }
+    
 
     public List<EnginePersons> findAll() {
         List<Persons> all;
@@ -43,5 +34,7 @@ public class PersonViewDAO {
         }
         return all2;
     }
+    
+    
 
 }
