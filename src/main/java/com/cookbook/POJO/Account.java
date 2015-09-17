@@ -1,6 +1,7 @@
 package com.cookbook.POJO;
 
 import com.cookbook.DTO.PersonDTO;
+import com.cookbook.DTO.AccountDTO;
 import com.cookbook.ENGINE.EngineAddress;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -31,14 +32,12 @@ public class Account implements Serializable {
         this.login = login;
         this.password = password;
     }
-    /*
-    public Account(PersonDTO p) {
-        personId = p.getPersonId();
-        firstname = p.getFirstname();
-        surname = p.getSurname();
-        addressList = null;
+    
+    public Account(AccountDTO a) {
+       login = a.getLogin();
+       password = a.getPassword();
     }
-    */
+    
 
   /*  public Account(String firstname, String surname, List<EngineAddress> addressList) {
         this.firstname = firstname;

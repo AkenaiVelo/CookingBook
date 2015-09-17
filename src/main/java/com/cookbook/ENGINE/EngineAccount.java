@@ -1,5 +1,6 @@
 package com.cookbook.ENGINE;
 
+import com.cookbook.DTO.AccountDTO;
 import com.cookbook.POJO.Account;
 import javax.persistence.Entity;
 import javax.persistence.Inheritance;
@@ -12,6 +13,10 @@ import javax.persistence.Table;
 public class EngineAccount extends Account {
 
     public EngineAccount() {
+    }
+
+    public EngineAccount(AccountDTO e) {
+        super(e);
     }
 
     @Override
