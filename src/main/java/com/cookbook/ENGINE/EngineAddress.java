@@ -1,7 +1,13 @@
 package com.cookbook.ENGINE;
 
 import com.cookbook.POJO.Address;
-
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+@Entity
+@Table(name = "HIBER.ADDRESS")
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class EngineAddress extends Address {
 
     public EngineAddress() {

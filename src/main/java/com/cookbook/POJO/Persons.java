@@ -6,23 +6,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-/**
- *
- * @author Velo
- */
-@Entity
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@Table(name = "HIBER.PERSONS")
+@MappedSuperclass
 public class Persons implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -34,7 +25,7 @@ public class Persons implements Serializable {
     private String firstname;
     @Column(name = "SURNAME")
     private String surname;
-    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = Address.class)  //zobacz czy działa z EAGER
+    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = EngineAddress.class)  //zobacz czy działa z EAGER
     private List<EngineAddress> addressList;
 
     public Persons() {

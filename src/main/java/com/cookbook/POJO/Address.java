@@ -4,28 +4,19 @@ import com.cookbook.ENGINE.EnginePersons;
 import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
 
 /**
  *
  * @author Velo
  */
-@Entity
-@Table(name = "HIBER.ADDRESS")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
-@NamedQueries({
-    @NamedQuery(name = "Address.findAll", query = "SELECT a FROM Address a")})
+@MappedSuperclass
 public class Address implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,7 +30,7 @@ public class Address implements Serializable {
     @Column(name = "ZIPCODE")
     private String zipcode;
     @JoinColumn(name = "PERSON_ID", referencedColumnName = "PERSON_ID")
-    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Persons.class)
+    @ManyToOne(fetch = FetchType.LAZY, targetEntity = EnginePersons.class)
     private EnginePersons personId;
 
     public Address() {

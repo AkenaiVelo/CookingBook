@@ -3,7 +3,13 @@ package com.cookbook.ENGINE;
 import com.cookbook.DTO.PersonDTO;
 import com.cookbook.POJO.Persons;
 import java.util.List;
-
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+@Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Table(name = "HIBER.PERSONS")
 public class EnginePersons extends Persons {
 
     public EnginePersons() {
