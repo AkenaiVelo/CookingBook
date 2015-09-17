@@ -4,14 +4,12 @@ import com.cookbook.ENGINE.EnginePersons;
 import java.util.ArrayList;
 
 public class PersonDTO {
-
     private Integer personId;
     private String firstname;
     private String surname;
     private ArrayList<String> addressList;
 
     public PersonDTO(EnginePersons e) {
-
     }
 
     public Integer getPersonId() {
@@ -45,5 +43,4 @@ public class PersonDTO {
     public void setAddressList(ArrayList<String> addressList) {
         this.addressList = addressList;
     }
-
 }

@@ -17,24 +17,15 @@ public class PersonViewDAO {
     }
 
     public EnginePersons getPersonById(int id) {
-        Persons p = em.find(EnginePersons.class, id);
-        EnginePersons result = new EnginePersons(p);
-        return result;
+        EnginePersons p = em.find(EnginePersons.class, id);
+        return p;
     }
-
     
-
     public List<EnginePersons> findAll() {
         List<Persons> all;
         List<EnginePersons> all2 = new ArrayList<>();
-        Query query = em.createQuery("SELECT p FROM EnginePersons p"); //You will get Weayher object
-        all = query.getResultList(); //You are accessing  as list<WeatherModel>
-        for (Persons p : all) {
-            all2.add(new EnginePersons(p));
-        }
+        Query query = em.createQuery("SELECT p FROM EnginePersons p"); 
+        all2 = query.getResultList(); 
         return all2;
     }
-    
-    
-
 }

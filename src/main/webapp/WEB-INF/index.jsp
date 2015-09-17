@@ -30,13 +30,13 @@
             <%= x%>
             aaaa
             
-              <%--   MaQ - Test pobierania adresow dla Person z id 1
+                 MaQ - Test pobierania adresow dla Person z id 1
             
             <% for(EngineAddress p : addressViewDAO.CRITERIA_getAddressOfPerson(1))
             {%>
             <li> <%= p%> </li>
                 <% } %>          
-           --%>
+           
 
         </ol>
     </body>

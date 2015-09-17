@@ -13,12 +13,6 @@ public class EngineAddress extends Address {
     public EngineAddress() {
     }
     
-public EngineAddress(EngineAddress a){
-    
-    super((Address)a);
-    
-}  
-    
     public EngineAddress(String city, String zipcode, EnginePersons person) {
         super(city, zipcode, person);
     }
@@ -47,5 +41,4 @@ public EngineAddress(EngineAddress a){
     public String toString() {
         return " addressId=" + this.getAddressId() + " City=" + this.getCity() + " Zip-Code=" + this.getZipcode();
     }
-
 }

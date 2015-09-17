@@ -3,7 +3,6 @@ package com.cookbook.POJO;
 import com.cookbook.DTO.PersonDTO;
 import com.cookbook.ENGINE.EngineAddress;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.FetchType;
@@ -25,30 +24,12 @@ public class Persons implements Serializable {
     private String firstname;
     @Column(name = "SURNAME")
     private String surname;
-    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = EngineAddress.class)  //zobacz czy działa z EAGER
+    @OneToMany(mappedBy = "personId", fetch = FetchType.LAZY, targetEntity = EngineAddress.class) 
     private List<EngineAddress> addressList;
 
     public Persons() {
     }
 
-    public Persons(Persons p) {
-        personId = p.personId;
-        firstname = p.firstname;
-        surname = p.surname;
-        addressList = deepCopy(p.addressList);
-    }
-
-    private ArrayList<EngineAddress> deepCopy(List<EngineAddress> intab){
-        ArrayList<EngineAddress> outtab = new ArrayList<>();
-        for(EngineAddress a:intab){
-            EngineAddress temp = new EngineAddress(a);
-            outtab.add(temp);
-        }
-        
-        
-        return outtab;
-    }
-    
     public Persons(PersonDTO p) {
         personId = p.getPersonId();
         firstname = p.getFirstname();
@@ -102,5 +83,4 @@ public class Persons implements Serializable {
     public String toString() {
         return " personId=" + this.getPersonId() + " Firstname=" + this.getFirstname() + " surname=" + this.getSurname();
     }
-
 }

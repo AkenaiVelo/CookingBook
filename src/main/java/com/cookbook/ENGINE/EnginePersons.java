@@ -15,10 +15,6 @@ public class EnginePersons extends Persons {
     public EnginePersons() {
     }
 
-    public EnginePersons(Persons p) {
-        super(p);
-    }
-
     public EnginePersons(PersonDTO p) {
         super(p);
     }
@@ -36,7 +32,6 @@ public class EnginePersons extends Persons {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Persons)) {
             return false;
         }
@@ -51,5 +46,4 @@ public class EnginePersons extends Persons {
     public String toString() {
         return super.toString();
     }
-
 }

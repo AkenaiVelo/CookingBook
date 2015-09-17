@@ -3,18 +3,14 @@ package com.cookbook.DTO;
 import com.cookbook.ENGINE.EngineAddress;
 
 public class AddressDTO {
-
     private Integer addressId;
     private String city;
     private String zipcode;
     private PersonDTO personId;
 
-    public AddressDTO(EngineAddress a) { // ????? <<<< tak ma byc czy EngineAddress
-
+    public AddressDTO(EngineAddress a) { 
     }
     
-    
-
     public Integer getAddressId() {
         return addressId;
     }
@@ -46,5 +42,4 @@ public class AddressDTO {
     public void setPersonId(PersonDTO personId) {
         this.personId = personId;
     }
-
 }

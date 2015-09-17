@@ -25,7 +25,7 @@ public class PersonChangeDAO {
     }
 
     public boolean updatePersonFirstname(EnginePersons p, String newName) {
-        String hqlUpdate = "update Persons c set c.firstname = :newName where c.personId = :id";
+        String hqlUpdate = "update EnginePersons c set c.firstname = :newName where c.personId = :id";
         Query x = em.createQuery(hqlUpdate)
                 .setParameter("newName", newName)
                 .setParameter("id", p.getPersonId());
@@ -34,7 +34,7 @@ public class PersonChangeDAO {
     }
 
     public boolean deletePerson(EnginePersons p) {
-        String hqlDelete = "delete Customer where id = :parId";
+        String hqlDelete = "delete EnginePersons where id = :parId";
         int deletedEntities;
         deletedEntities = em.createQuery(hqlDelete)
                 .setParameter("parId", p.getPersonId())

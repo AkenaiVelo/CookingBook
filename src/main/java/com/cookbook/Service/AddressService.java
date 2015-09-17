@@ -14,10 +14,9 @@ public class AddressService {
 
     @Autowired
     private AddressViewDAO dao_view;
+    @Autowired
     private AddressChangeDAO dao_change;
-
-  
-    
+ 
     public ArrayList<AddressDTO> getPersonAddress(PersonDTO p)
     {
         ArrayList<AddressDTO> result = new ArrayList<>();
