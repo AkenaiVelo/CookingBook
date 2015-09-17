@@ -15,7 +15,7 @@
     </head>
 
     <body>
-        <form method="POST" action="guest.html">
+        <form method="POST" action="index.html">
             Name: <input type="text" name="name" />
             <input type="submit" value="Add" />
         </form>
