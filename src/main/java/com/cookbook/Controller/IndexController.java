@@ -1,5 +1,6 @@
 package com.cookbook.Controller;
 
+import com.cookbook.DAO.AddressViewDAO;
 import com.cookbook.DAO.PersonViewDAO;
 //import com.cookbook.Other.Loger;
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,8 @@ public class IndexController {
 
     @Autowired
     private PersonViewDAO personViewDAO;
+    @Autowired
+    private AddressViewDAO addressViewDAO;
 
     @RequestMapping(value = "/index")
     public ModelAndView index(HttpServletRequest request) {
@@ -24,6 +27,7 @@ public class IndexController {
          */
         ModelAndView m = new ModelAndView("index.jsp");
         m.addObject("personViewDAO", personViewDAO);
+        m.addObject("addressViewDAO", addressViewDAO);
         return m;
     }
 }
