@@ -1,7 +1,9 @@
 package com.cookbook.Controller;
 
+import com.cookbook.DAO.AccountViewDAO;
 import com.cookbook.DAO.AddressViewDAO;
 import com.cookbook.DAO.PersonViewDAO;
+import com.cookbook.POJO.Account;
 //import com.cookbook.Other.Loger;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +18,8 @@ public class IndexController {
     private PersonViewDAO personViewDAO;
     @Autowired
     private AddressViewDAO addressViewDAO;
+    @Autowired
+    private AccountViewDAO accountViewDAO;
 
     @RequestMapping(value = "/index")
     public ModelAndView index(HttpServletRequest request) {
@@ -28,6 +32,7 @@ public class IndexController {
         ModelAndView m = new ModelAndView("index.jsp");
         m.addObject("personViewDAO", personViewDAO);
         m.addObject("addressViewDAO", addressViewDAO);
+        m.addObject("accountViewDAO", accountViewDAO);
         return m;
     }
 }

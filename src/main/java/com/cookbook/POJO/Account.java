@@ -57,5 +57,10 @@ public class Account implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    
+     @Override
+    public String toString() {
+        return "Login = " + this.getLogin() + " , password = " + this.getPassword();
+    }
    
 }
