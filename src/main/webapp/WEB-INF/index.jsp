@@ -17,6 +17,7 @@
     </head>
 
     <body>
+        
         <form method="POST" action="index.html">
             Name: <input type="text" name="name" />
             <input type="submit" value="Add" />
@@ -48,7 +49,10 @@
             <li> <%= p%> </li>
                 <% } %> 
            
-
+            <form method="POST" action="index.html">
+          
+            <input type="submit" name="button" value="linknowy" />
+        </form>
         </ol>
     </body>
 </html>

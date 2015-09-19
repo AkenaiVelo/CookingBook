@@ -37,8 +37,8 @@
                             <div class="innertube">
                                 <h3>Left heading</h3>
                                 <ul>
-                                    <li><a href="Pages/test1.jsp">Link a</a></li>
-                                    <li><a href="register.jsp">Link b</a></li>
+                                    <li><a href="${pageContext.servletContext.contextPath}">HOME</a></li>
+                                    <li><a href="${pageContext.servletContext.contextPath}/register.jsp">Register</a></li>
                                     <li><a href="#">Link c</a></li>
                                     <li><a href="#">Link 4</a></li>
                                     <li><a href="#">Link 5</a></li>
