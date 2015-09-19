@@ -29,4 +29,8 @@ public class AccountService {
     
         return account_change_dao.AddAccount(new EngineAccount(e));
     }
+       public boolean checkLogin(String s)//sprawdza czy dany login jest zajety
+       {
+        return !account_view_dao.checkAccountByLogin(s);
+       }
 }

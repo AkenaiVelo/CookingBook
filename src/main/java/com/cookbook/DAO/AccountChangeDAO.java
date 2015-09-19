@@ -18,11 +18,15 @@ public class AccountChangeDAO {
     {
         
     }
-    
      public boolean AddAccount(EngineAccount account) {
+        
         try {
+            System.out.println("Zapisuje "+account);
+             em.getTransaction().begin();
             em.persist(account);
+            em.getTransaction().commit();
         } catch (PersistenceException p) {
+            System.out.println(p);
             Loger.logger.error("Błąd dodawania konta");
             return false;
         }
@@ -31,7 +35,7 @@ public class AccountChangeDAO {
     
     public boolean ChangePassword(EngineAccount ea, String new_password)
     {
-        if(ea.getPassword() == new_password)
+        if(ea.getPassword().equals(new_password))
         {
               try {
           ea.setPassword(new_password);
